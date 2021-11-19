@@ -19,6 +19,11 @@
 		80B1E9A52740B2EB002D2F81 /* ChallengeExcitedAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E9A42740B2EB002D2F81 /* ChallengeExcitedAppTests.swift */; };
 		80B1E9AF2740B2EB002D2F81 /* ChallengeExcitedAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E9AE2740B2EB002D2F81 /* ChallengeExcitedAppUITests.swift */; };
 		80B1E9B12740B2EB002D2F81 /* ChallengeExcitedAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E9B02740B2EB002D2F81 /* ChallengeExcitedAppUITestsLaunchTests.swift */; };
+		80C3DE3527478A83005F8354 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3427478A83005F8354 /* SampleViewController.swift */; };
+		80C3DE3727478AF6005F8354 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3627478AF6005F8354 /* LoginViewController.swift */; };
+		80C3DE3927478BEE005F8354 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3827478BEE005F8354 /* ChallengeViewController.swift */; };
+		80C3DE3B27478BF8005F8354 /* OthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3A27478BF8005F8354 /* OthersViewController.swift */; };
+		80C3DE3D27478C05005F8354 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3C27478C05005F8354 /* HistoryViewController.swift */; };
 		C255860E7DBECDEF8119E007 /* Pods_ChallengeExcitedApp_ChallengeExcitedAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7477A3285EF4D14850D604 /* Pods_ChallengeExcitedApp_ChallengeExcitedAppUITests.framework */; };
 		CABDF7B410F28663FCB08DF6 /* Pods_ChallengeExcitedAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3139D2FE996DA58C3BF385 /* Pods_ChallengeExcitedAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +67,11 @@
 		80B1E9AA2740B2EB002D2F81 /* ChallengeExcitedAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeExcitedAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B1E9AE2740B2EB002D2F81 /* ChallengeExcitedAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeExcitedAppUITests.swift; sourceTree = "<group>"; };
 		80B1E9B02740B2EB002D2F81 /* ChallengeExcitedAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeExcitedAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		80C3DE3427478A83005F8354 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		80C3DE3627478AF6005F8354 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		80C3DE3827478BEE005F8354 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		80C3DE3A27478BF8005F8354 /* OthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersViewController.swift; sourceTree = "<group>"; };
+		80C3DE3C27478C05005F8354 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		8B5186A35D4E5D10BC156ED3 /* Pods-ChallengeExcitedAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeExcitedAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeExcitedAppTests/Pods-ChallengeExcitedAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DACF11516AAB6F21604AF811 /* Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests/Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA28D4911A3B471E3487140F /* Pods_ChallengeExcitedApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeExcitedApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +139,10 @@
 		8066A2A92743692B007FAFC4 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				80C3DE3627478AF6005F8354 /* LoginViewController.swift */,
+				80C3DE3827478BEE005F8354 /* ChallengeViewController.swift */,
+				80C3DE3A27478BF8005F8354 /* OthersViewController.swift */,
+				80C3DE3C27478C05005F8354 /* HistoryViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -163,6 +177,7 @@
 				80B1E98A2740B2E9002D2F81 /* AppDelegate.swift */,
 				80B1E98C2740B2E9002D2F81 /* SceneDelegate.swift */,
 				80B1E98E2740B2E9002D2F81 /* ViewController.swift */,
+				80C3DE3427478A83005F8354 /* SampleViewController.swift */,
 				80B1E9902740B2E9002D2F81 /* Main.storyboard */,
 				80B1E9962740B2EB002D2F81 /* Assets.xcassets */,
 				80B1E9982740B2EB002D2F81 /* LaunchScreen.storyboard */,
@@ -428,8 +443,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80C3DE3727478AF6005F8354 /* LoginViewController.swift in Sources */,
 				80B1E9952740B2E9002D2F81 /* ChallengeExcitedApp.xcdatamodeld in Sources */,
+				80C3DE3B27478BF8005F8354 /* OthersViewController.swift in Sources */,
+				80C3DE3D27478C05005F8354 /* HistoryViewController.swift in Sources */,
+				80C3DE3927478BEE005F8354 /* ChallengeViewController.swift in Sources */,
 				80B1E98F2740B2E9002D2F81 /* ViewController.swift in Sources */,
+				80C3DE3527478A83005F8354 /* SampleViewController.swift in Sources */,
 				80B1E98B2740B2E9002D2F81 /* AppDelegate.swift in Sources */,
 				80B1E98D2740B2E9002D2F81 /* SceneDelegate.swift in Sources */,
 				8066A2AB2743696B007FAFC4 /* Challenge.swift in Sources */,
