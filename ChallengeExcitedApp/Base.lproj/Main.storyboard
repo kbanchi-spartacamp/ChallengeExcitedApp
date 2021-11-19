@@ -32,6 +32,15 @@
                                     <action selector="tapLoginButton:" destination="BVO-u0-DjI" eventType="touchUpInside" id="NEx-tG-k5p"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uI7-gG-iax">
+                                <rect key="frame" x="172" y="748" width="73" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sample"/>
+                                <connections>
+                                    <segue destination="Qmf-Oz-i6X" kind="show" id="fkC-tc-pUl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l9k-kz-D5d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,6 +49,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19H-tB-2Kq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-58" y="102"/>
+        </scene>
+        <!--Sample View Controller-->
+        <scene sceneID="Qkx-QC-C4j">
+            <objects>
+                <viewController id="Qmf-Oz-i6X" customClass="SampleViewController" customModule="ChallengeExcitedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xfg-6y-47l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NV0-js-Kyq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="sfB-au-mcM">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sfB-au-mcM" id="9si-df-zzp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Z1-b3-ir6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NV0-js-Kyq" firstAttribute="leading" secondItem="6Z1-b3-ir6" secondAttribute="leading" id="dx4-yJ-0b5"/>
+                            <constraint firstItem="6Z1-b3-ir6" firstAttribute="bottom" secondItem="NV0-js-Kyq" secondAttribute="bottom" id="k0a-tF-mkF"/>
+                            <constraint firstItem="NV0-js-Kyq" firstAttribute="top" secondItem="6Z1-b3-ir6" secondAttribute="top" id="rpN-dW-Hl7"/>
+                            <constraint firstItem="6Z1-b3-ir6" firstAttribute="trailing" secondItem="NV0-js-Kyq" secondAttribute="trailing" id="tnl-KJ-Kvm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yVX-L6-F53"/>
+                    <connections>
+                        <outlet property="tableView" destination="NV0-js-Kyq" id="RAm-yb-p6i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5l-VS-uTQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-61" y="781"/>
         </scene>
         <!--その他-->
         <scene sceneID="YnL-LI-GME">
