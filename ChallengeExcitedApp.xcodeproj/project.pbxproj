@@ -24,6 +24,12 @@
 		80C3DE3927478BEE005F8354 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3827478BEE005F8354 /* ChallengeViewController.swift */; };
 		80C3DE3B27478BF8005F8354 /* OthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3A27478BF8005F8354 /* OthersViewController.swift */; };
 		80C3DE3D27478C05005F8354 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3C27478C05005F8354 /* HistoryViewController.swift */; };
+		80F9E13E27488308003D07E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9E13D27488308003D07E7 /* Constants.swift */; };
+		80F9E14127489530003D07E7 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9E1402748952F003D07E7 /* Alert.swift */; };
+		80F9E143274896DE003D07E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9E142274896DE003D07E7 /* User.swift */; };
+		80F9E1452748C22A003D07E7 /* ChallengeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9E1442748C22A003D07E7 /* ChallengeDetailViewController.swift */; };
+		80F9E1472748C29D003D07E7 /* OtherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9E1462748C29D003D07E7 /* OtherDetailViewController.swift */; };
+		80F9E1492748DC9A003D07E7 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F9E1482748DC9A003D07E7 /* Comment.swift */; };
 		C255860E7DBECDEF8119E007 /* Pods_ChallengeExcitedApp_ChallengeExcitedAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7477A3285EF4D14850D604 /* Pods_ChallengeExcitedApp_ChallengeExcitedAppUITests.framework */; };
 		CABDF7B410F28663FCB08DF6 /* Pods_ChallengeExcitedAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3139D2FE996DA58C3BF385 /* Pods_ChallengeExcitedAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +78,12 @@
 		80C3DE3827478BEE005F8354 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		80C3DE3A27478BF8005F8354 /* OthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersViewController.swift; sourceTree = "<group>"; };
 		80C3DE3C27478C05005F8354 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		80F9E13D27488308003D07E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		80F9E1402748952F003D07E7 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		80F9E142274896DE003D07E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		80F9E1442748C22A003D07E7 /* ChallengeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailViewController.swift; sourceTree = "<group>"; };
+		80F9E1462748C29D003D07E7 /* OtherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDetailViewController.swift; sourceTree = "<group>"; };
+		80F9E1482748DC9A003D07E7 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		8B5186A35D4E5D10BC156ED3 /* Pods-ChallengeExcitedAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeExcitedAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeExcitedAppTests/Pods-ChallengeExcitedAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DACF11516AAB6F21604AF811 /* Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests/Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA28D4911A3B471E3487140F /* Pods_ChallengeExcitedApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeExcitedApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				8066A2AA2743696B007FAFC4 /* Challenge.swift */,
+				80F9E142274896DE003D07E7 /* User.swift */,
+				80F9E1482748DC9A003D07E7 /* Comment.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -143,6 +157,8 @@
 				80C3DE3827478BEE005F8354 /* ChallengeViewController.swift */,
 				80C3DE3A27478BF8005F8354 /* OthersViewController.swift */,
 				80C3DE3C27478C05005F8354 /* HistoryViewController.swift */,
+				80F9E1442748C22A003D07E7 /* ChallengeDetailViewController.swift */,
+				80F9E1462748C29D003D07E7 /* OtherDetailViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -172,6 +188,8 @@
 		80B1E9892740B2E9002D2F81 /* ChallengeExcitedApp */ = {
 			isa = PBXGroup;
 			children = (
+				80F9E13F2748951A003D07E7 /* commons */,
+				80F9E13C27488242003D07E7 /* constants */,
 				8066A2A92743692B007FAFC4 /* controllers */,
 				8066A2A827436915007FAFC4 /* models */,
 				80B1E98A2740B2E9002D2F81 /* AppDelegate.swift */,
@@ -202,6 +220,22 @@
 				80B1E9B02740B2EB002D2F81 /* ChallengeExcitedAppUITestsLaunchTests.swift */,
 			);
 			path = ChallengeExcitedAppUITests;
+			sourceTree = "<group>";
+		};
+		80F9E13C27488242003D07E7 /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				80F9E13D27488308003D07E7 /* Constants.swift */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
+		80F9E13F2748951A003D07E7 /* commons */ = {
+			isa = PBXGroup;
+			children = (
+				80F9E1402748952F003D07E7 /* Alert.swift */,
+			);
+			path = commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,14 +477,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F9E143274896DE003D07E7 /* User.swift in Sources */,
+				80F9E1452748C22A003D07E7 /* ChallengeDetailViewController.swift in Sources */,
 				80C3DE3727478AF6005F8354 /* LoginViewController.swift in Sources */,
+				80F9E13E27488308003D07E7 /* Constants.swift in Sources */,
 				80B1E9952740B2E9002D2F81 /* ChallengeExcitedApp.xcdatamodeld in Sources */,
 				80C3DE3B27478BF8005F8354 /* OthersViewController.swift in Sources */,
 				80C3DE3D27478C05005F8354 /* HistoryViewController.swift in Sources */,
 				80C3DE3927478BEE005F8354 /* ChallengeViewController.swift in Sources */,
+				80F9E14127489530003D07E7 /* Alert.swift in Sources */,
 				80B1E98F2740B2E9002D2F81 /* ViewController.swift in Sources */,
 				80C3DE3527478A83005F8354 /* SampleViewController.swift in Sources */,
+				80F9E1492748DC9A003D07E7 /* Comment.swift in Sources */,
 				80B1E98B2740B2E9002D2F81 /* AppDelegate.swift in Sources */,
+				80F9E1472748C29D003D07E7 /* OtherDetailViewController.swift in Sources */,
 				80B1E98D2740B2E9002D2F81 /* SceneDelegate.swift in Sources */,
 				8066A2AB2743696B007FAFC4 /* Challenge.swift in Sources */,
 			);
