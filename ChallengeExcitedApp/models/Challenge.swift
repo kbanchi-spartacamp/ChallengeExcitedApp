@@ -15,4 +15,5 @@ struct Challenge {
     let close_flg: Int
     let created_at: String
     let updated_at: String
+    let user: User
 }

@@ -10,6 +10,7 @@ target 'ChallengeExcitedApp' do
   pod 'SwiftyJSON'
   pod 'KeychainAccess'
   pod 'Kingfisher'
+  pod 'PKHUD'
 
   target 'ChallengeExcitedAppTests' do
     inherit! :search_paths

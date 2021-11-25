@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		55E12416DFBAE0B0018DA3A7 /* Pods_ChallengeExcitedApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA28D4911A3B471E3487140F /* Pods_ChallengeExcitedApp.framework */; };
+		801B49E3274DC98C00155A94 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B49E2274DC98C00155A94 /* WelcomeViewController.swift */; };
+		801B49E5274DD4D900155A94 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B49E4274DD4D900155A94 /* RegisterViewController.swift */; };
 		8066A2AB2743696B007FAFC4 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8066A2AA2743696B007FAFC4 /* Challenge.swift */; };
+		80AEC2E4274FB93A005AE892 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AEC2E3274FB93A005AE892 /* SettingViewController.swift */; };
 		80B1E98B2740B2E9002D2F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E98A2740B2E9002D2F81 /* AppDelegate.swift */; };
 		80B1E98D2740B2E9002D2F81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E98C2740B2E9002D2F81 /* SceneDelegate.swift */; };
 		80B1E98F2740B2E9002D2F81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E98E2740B2E9002D2F81 /* ViewController.swift */; };
@@ -19,7 +22,6 @@
 		80B1E9A52740B2EB002D2F81 /* ChallengeExcitedAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E9A42740B2EB002D2F81 /* ChallengeExcitedAppTests.swift */; };
 		80B1E9AF2740B2EB002D2F81 /* ChallengeExcitedAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E9AE2740B2EB002D2F81 /* ChallengeExcitedAppUITests.swift */; };
 		80B1E9B12740B2EB002D2F81 /* ChallengeExcitedAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E9B02740B2EB002D2F81 /* ChallengeExcitedAppUITestsLaunchTests.swift */; };
-		80C3DE3527478A83005F8354 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3427478A83005F8354 /* SampleViewController.swift */; };
 		80C3DE3727478AF6005F8354 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3627478AF6005F8354 /* LoginViewController.swift */; };
 		80C3DE3927478BEE005F8354 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3827478BEE005F8354 /* ChallengeViewController.swift */; };
 		80C3DE3B27478BF8005F8354 /* OthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C3DE3A27478BF8005F8354 /* OthersViewController.swift */; };
@@ -58,7 +60,10 @@
 		1B7EF0EA6C67873DC15885A8 /* Pods-ChallengeExcitedApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeExcitedApp.release.xcconfig"; path = "Target Support Files/Pods-ChallengeExcitedApp/Pods-ChallengeExcitedApp.release.xcconfig"; sourceTree = "<group>"; };
 		1F9EC8BD54D3110E9C09D40E /* Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests/Pods-ChallengeExcitedApp-ChallengeExcitedAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3736A8E1A68979F1AB3A38AA /* Pods-ChallengeExcitedAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeExcitedAppTests.release.xcconfig"; path = "Target Support Files/Pods-ChallengeExcitedAppTests/Pods-ChallengeExcitedAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		801B49E2274DC98C00155A94 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		801B49E4274DD4D900155A94 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8066A2AA2743696B007FAFC4 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		80AEC2E3274FB93A005AE892 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		80B1E9872740B2E9002D2F81 /* ChallengeExcitedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeExcitedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B1E98A2740B2E9002D2F81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B1E98C2740B2E9002D2F81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +78,6 @@
 		80B1E9AA2740B2EB002D2F81 /* ChallengeExcitedAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeExcitedAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B1E9AE2740B2EB002D2F81 /* ChallengeExcitedAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeExcitedAppUITests.swift; sourceTree = "<group>"; };
 		80B1E9B02740B2EB002D2F81 /* ChallengeExcitedAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeExcitedAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		80C3DE3427478A83005F8354 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		80C3DE3627478AF6005F8354 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		80C3DE3827478BEE005F8354 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		80C3DE3A27478BF8005F8354 /* OthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +163,9 @@
 				80C3DE3C27478C05005F8354 /* HistoryViewController.swift */,
 				80F9E1442748C22A003D07E7 /* ChallengeDetailViewController.swift */,
 				80F9E1462748C29D003D07E7 /* OtherDetailViewController.swift */,
+				801B49E2274DC98C00155A94 /* WelcomeViewController.swift */,
+				801B49E4274DD4D900155A94 /* RegisterViewController.swift */,
+				80AEC2E3274FB93A005AE892 /* SettingViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -195,7 +202,6 @@
 				80B1E98A2740B2E9002D2F81 /* AppDelegate.swift */,
 				80B1E98C2740B2E9002D2F81 /* SceneDelegate.swift */,
 				80B1E98E2740B2E9002D2F81 /* ViewController.swift */,
-				80C3DE3427478A83005F8354 /* SampleViewController.swift */,
 				80B1E9902740B2E9002D2F81 /* Main.storyboard */,
 				80B1E9962740B2EB002D2F81 /* Assets.xcassets */,
 				80B1E9982740B2EB002D2F81 /* LaunchScreen.storyboard */,
@@ -478,18 +484,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				80F9E143274896DE003D07E7 /* User.swift in Sources */,
+				801B49E3274DC98C00155A94 /* WelcomeViewController.swift in Sources */,
 				80F9E1452748C22A003D07E7 /* ChallengeDetailViewController.swift in Sources */,
 				80C3DE3727478AF6005F8354 /* LoginViewController.swift in Sources */,
 				80F9E13E27488308003D07E7 /* Constants.swift in Sources */,
+				80AEC2E4274FB93A005AE892 /* SettingViewController.swift in Sources */,
 				80B1E9952740B2E9002D2F81 /* ChallengeExcitedApp.xcdatamodeld in Sources */,
 				80C3DE3B27478BF8005F8354 /* OthersViewController.swift in Sources */,
 				80C3DE3D27478C05005F8354 /* HistoryViewController.swift in Sources */,
 				80C3DE3927478BEE005F8354 /* ChallengeViewController.swift in Sources */,
 				80F9E14127489530003D07E7 /* Alert.swift in Sources */,
 				80B1E98F2740B2E9002D2F81 /* ViewController.swift in Sources */,
-				80C3DE3527478A83005F8354 /* SampleViewController.swift in Sources */,
 				80F9E1492748DC9A003D07E7 /* Comment.swift in Sources */,
 				80B1E98B2740B2E9002D2F81 /* AppDelegate.swift in Sources */,
+				801B49E5274DD4D900155A94 /* RegisterViewController.swift in Sources */,
 				80F9E1472748C29D003D07E7 /* OtherDetailViewController.swift in Sources */,
 				80B1E98D2740B2E9002D2F81 /* SceneDelegate.swift in Sources */,
 				8066A2AB2743696B007FAFC4 /* Challenge.swift in Sources */,

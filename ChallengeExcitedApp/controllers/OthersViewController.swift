@@ -10,6 +10,7 @@ import AuthenticationServices
 import Alamofire
 import SwiftyJSON
 import KeychainAccess
+import PKHUD
 
 class OthersViewController: UIViewController {
 
@@ -30,6 +31,7 @@ class OthersViewController: UIViewController {
     }
     
     func getOthersChallengeInfo(keyword: String) {
+        HUD.show(.progress)
         let keychain = Keychain(service: consts.service)
         guard let accessToken = keychain["access_token"] else { return }
         guard let user_id = keychain["user_id"] else { return }
@@ -45,6 +47,12 @@ class OthersViewController: UIViewController {
                 let json = JSON(value).arrayValue
                 print(json)
                 for challenges in json {
+                    let user = User(
+                        id: challenges["user"]["id"].int!,
+                        name: challenges["user"]["name"].string!,
+                        email: challenges["user"]["email"].string!,
+                        profile_photo_url: challenges["user"]["profile_photo_url"].string!
+                    )
                     let challenge = Challenge(
                         id: challenges["id"].int!,
                         user_id: challenges["user_id"].int!,
@@ -52,14 +60,17 @@ class OthersViewController: UIViewController {
                         description: challenges["description"].string!,
                         close_flg: challenges["close_flg"].int!,
                         created_at: challenges["created_at"].string ?? "",
-                        updated_at: challenges["updated_at"].string ?? ""
+                        updated_at: challenges["updated_at"].string ?? "",
+                        user: user
                     )
                     self.challenges.append(challenge)
                 }
                 // print(self.myArticles)
                 self.othersTableView.reloadData()
+                HUD.hide()
                 // fail
             case .failure(let err):
+                HUD.hide()
                 print(err.localizedDescription)
             }
         }
@@ -86,7 +97,10 @@ extension OthersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = challenges[indexPath.row].title
+        let nameLabel = cell.viewWithTag(1) as! UILabel
+        nameLabel.text = challenges[indexPath.row].user.name + " さん"
+        let titleLabel = cell.viewWithTag(2) as! UILabel
+        titleLabel.text = challenges[indexPath.row].title
         return cell
     }
     

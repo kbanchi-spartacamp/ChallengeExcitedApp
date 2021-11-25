@@ -10,6 +10,7 @@ import AuthenticationServices
 import Alamofire
 import SwiftyJSON
 import KeychainAccess
+import PKHUD
 
 class ChallengeViewController: UIViewController {
 
@@ -18,12 +19,15 @@ class ChallengeViewController: UIViewController {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var challengeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let keychain = Keychain(service: consts.service)
+        titleTextField.layer.cornerRadius = 10.0
+        descriptionTextView.layer.cornerRadius = 10.0
+        challengeButton.layer.cornerRadius = 10.0
         
     }
     
@@ -32,6 +36,7 @@ class ChallengeViewController: UIViewController {
     }
     
     func postChallenge(title: String, description: String) {
+        HUD.show(.progress)
         let keychain = Keychain(service: consts.service)
         guard let user_id = keychain["user_id"] else { return print("no user_id")}
         guard let accessToken = keychain["access_token"] else { return print("no token")}
@@ -51,6 +56,7 @@ class ChallengeViewController: UIViewController {
                 print("JSON: \n\(json)")
                 self.alert.showAlert(title: "Create", messaage: "create challenge", viewController: self)
                 self.clearTextField()
+                HUD.hide()
             case .failure(let err):
                 self.alert.showAlert(title: "Error", messaage: err.localizedDescription, viewController: self)
                 print(err.localizedDescription)
