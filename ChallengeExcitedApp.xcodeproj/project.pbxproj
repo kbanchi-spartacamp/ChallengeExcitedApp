@@ -10,8 +10,10 @@
 		55E12416DFBAE0B0018DA3A7 /* Pods_ChallengeExcitedApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA28D4911A3B471E3487140F /* Pods_ChallengeExcitedApp.framework */; };
 		801B49E3274DC98C00155A94 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B49E2274DC98C00155A94 /* WelcomeViewController.swift */; };
 		801B49E5274DD4D900155A94 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B49E4274DD4D900155A94 /* RegisterViewController.swift */; };
+		805B9338274FBA6F003FF789 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B9337274FBA6F003FF789 /* SettingTableViewController.swift */; };
+		805B933A274FC407003FF789 /* UserAvator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B9339274FC407003FF789 /* UserAvator.swift */; };
+		805B933C274FC43F003FF789 /* AvatorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B933B274FC43F003FF789 /* AvatorCategory.swift */; };
 		8066A2AB2743696B007FAFC4 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8066A2AA2743696B007FAFC4 /* Challenge.swift */; };
-		80AEC2E4274FB93A005AE892 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AEC2E3274FB93A005AE892 /* SettingViewController.swift */; };
 		80B1E98B2740B2E9002D2F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E98A2740B2E9002D2F81 /* AppDelegate.swift */; };
 		80B1E98D2740B2E9002D2F81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E98C2740B2E9002D2F81 /* SceneDelegate.swift */; };
 		80B1E98F2740B2E9002D2F81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1E98E2740B2E9002D2F81 /* ViewController.swift */; };
@@ -62,8 +64,10 @@
 		3736A8E1A68979F1AB3A38AA /* Pods-ChallengeExcitedAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeExcitedAppTests.release.xcconfig"; path = "Target Support Files/Pods-ChallengeExcitedAppTests/Pods-ChallengeExcitedAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		801B49E2274DC98C00155A94 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		801B49E4274DD4D900155A94 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		805B9337274FBA6F003FF789 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		805B9339274FC407003FF789 /* UserAvator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvator.swift; sourceTree = "<group>"; };
+		805B933B274FC43F003FF789 /* AvatorCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatorCategory.swift; sourceTree = "<group>"; };
 		8066A2AA2743696B007FAFC4 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
-		80AEC2E3274FB93A005AE892 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		80B1E9872740B2E9002D2F81 /* ChallengeExcitedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeExcitedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B1E98A2740B2E9002D2F81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B1E98C2740B2E9002D2F81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				8066A2AA2743696B007FAFC4 /* Challenge.swift */,
 				80F9E142274896DE003D07E7 /* User.swift */,
 				80F9E1482748DC9A003D07E7 /* Comment.swift */,
+				805B9339274FC407003FF789 /* UserAvator.swift */,
+				805B933B274FC43F003FF789 /* AvatorCategory.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -165,7 +171,7 @@
 				80F9E1462748C29D003D07E7 /* OtherDetailViewController.swift */,
 				801B49E2274DC98C00155A94 /* WelcomeViewController.swift */,
 				801B49E4274DD4D900155A94 /* RegisterViewController.swift */,
-				80AEC2E3274FB93A005AE892 /* SettingViewController.swift */,
+				805B9337274FBA6F003FF789 /* SettingTableViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -488,11 +494,12 @@
 				80F9E1452748C22A003D07E7 /* ChallengeDetailViewController.swift in Sources */,
 				80C3DE3727478AF6005F8354 /* LoginViewController.swift in Sources */,
 				80F9E13E27488308003D07E7 /* Constants.swift in Sources */,
-				80AEC2E4274FB93A005AE892 /* SettingViewController.swift in Sources */,
 				80B1E9952740B2E9002D2F81 /* ChallengeExcitedApp.xcdatamodeld in Sources */,
+				805B9338274FBA6F003FF789 /* SettingTableViewController.swift in Sources */,
 				80C3DE3B27478BF8005F8354 /* OthersViewController.swift in Sources */,
 				80C3DE3D27478C05005F8354 /* HistoryViewController.swift in Sources */,
 				80C3DE3927478BEE005F8354 /* ChallengeViewController.swift in Sources */,
+				805B933C274FC43F003FF789 /* AvatorCategory.swift in Sources */,
 				80F9E14127489530003D07E7 /* Alert.swift in Sources */,
 				80B1E98F2740B2E9002D2F81 /* ViewController.swift in Sources */,
 				80F9E1492748DC9A003D07E7 /* Comment.swift in Sources */,
@@ -500,6 +507,7 @@
 				801B49E5274DD4D900155A94 /* RegisterViewController.swift in Sources */,
 				80F9E1472748C29D003D07E7 /* OtherDetailViewController.swift in Sources */,
 				80B1E98D2740B2E9002D2F81 /* SceneDelegate.swift in Sources */,
+				805B933A274FC407003FF789 /* UserAvator.swift in Sources */,
 				8066A2AB2743696B007FAFC4 /* Challenge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
