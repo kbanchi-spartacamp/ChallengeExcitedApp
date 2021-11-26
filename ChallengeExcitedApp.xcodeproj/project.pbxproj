@@ -10,6 +10,7 @@
 		55E12416DFBAE0B0018DA3A7 /* Pods_ChallengeExcitedApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA28D4911A3B471E3487140F /* Pods_ChallengeExcitedApp.framework */; };
 		801B49E3274DC98C00155A94 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B49E2274DC98C00155A94 /* WelcomeViewController.swift */; };
 		801B49E5274DD4D900155A94 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801B49E4274DD4D900155A94 /* RegisterViewController.swift */; };
+		804A2CEF275091430089656A /* Good.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A2CEE275091430089656A /* Good.swift */; };
 		805B9338274FBA6F003FF789 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B9337274FBA6F003FF789 /* SettingTableViewController.swift */; };
 		805B933A274FC407003FF789 /* UserAvator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B9339274FC407003FF789 /* UserAvator.swift */; };
 		805B933C274FC43F003FF789 /* AvatorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B933B274FC43F003FF789 /* AvatorCategory.swift */; };
@@ -64,6 +65,7 @@
 		3736A8E1A68979F1AB3A38AA /* Pods-ChallengeExcitedAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeExcitedAppTests.release.xcconfig"; path = "Target Support Files/Pods-ChallengeExcitedAppTests/Pods-ChallengeExcitedAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		801B49E2274DC98C00155A94 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		801B49E4274DD4D900155A94 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		804A2CEE275091430089656A /* Good.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Good.swift; sourceTree = "<group>"; };
 		805B9337274FBA6F003FF789 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		805B9339274FC407003FF789 /* UserAvator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvator.swift; sourceTree = "<group>"; };
 		805B933B274FC43F003FF789 /* AvatorCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatorCategory.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				80F9E1482748DC9A003D07E7 /* Comment.swift */,
 				805B9339274FC407003FF789 /* UserAvator.swift */,
 				805B933B274FC43F003FF789 /* AvatorCategory.swift */,
+				804A2CEE275091430089656A /* Good.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -163,14 +166,14 @@
 		8066A2A92743692B007FAFC4 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				801B49E2274DC98C00155A94 /* WelcomeViewController.swift */,
 				80C3DE3627478AF6005F8354 /* LoginViewController.swift */,
+				801B49E4274DD4D900155A94 /* RegisterViewController.swift */,
 				80C3DE3827478BEE005F8354 /* ChallengeViewController.swift */,
 				80C3DE3A27478BF8005F8354 /* OthersViewController.swift */,
+				80F9E1462748C29D003D07E7 /* OtherDetailViewController.swift */,
 				80C3DE3C27478C05005F8354 /* HistoryViewController.swift */,
 				80F9E1442748C22A003D07E7 /* ChallengeDetailViewController.swift */,
-				80F9E1462748C29D003D07E7 /* OtherDetailViewController.swift */,
-				801B49E2274DC98C00155A94 /* WelcomeViewController.swift */,
-				801B49E4274DD4D900155A94 /* RegisterViewController.swift */,
 				805B9337274FBA6F003FF789 /* SettingTableViewController.swift */,
 			);
 			path = controllers;
@@ -489,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				804A2CEF275091430089656A /* Good.swift in Sources */,
 				80F9E143274896DE003D07E7 /* User.swift in Sources */,
 				801B49E3274DC98C00155A94 /* WelcomeViewController.swift in Sources */,
 				80F9E1452748C22A003D07E7 /* ChallengeDetailViewController.swift in Sources */,

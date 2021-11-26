@@ -16,6 +16,7 @@ class OthersViewController: UIViewController {
 
     let consts = Constants.shared
     var challenges: [Challenge] = []
+    let alert = Alert()
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var othersTableView: UITableView!
@@ -72,6 +73,7 @@ class OthersViewController: UIViewController {
             case .failure(let err):
                 HUD.hide()
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }
@@ -102,6 +104,10 @@ extension OthersViewController: UITableViewDataSource {
         let titleLabel = cell.viewWithTag(2) as! UILabel
         titleLabel.text = challenges[indexPath.row].title
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
 }

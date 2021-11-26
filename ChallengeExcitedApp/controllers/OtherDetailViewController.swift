@@ -16,7 +16,10 @@ class OtherDetailViewController: UIViewController {
     let consts = Constants.shared
     var challengeId = ""
     var comments: [Comment] = []
+    var good: Good!
+    var goods: [Good] = []
     let alert = Alert()
+    var goodFlg = 0
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -26,6 +29,7 @@ class OtherDetailViewController: UIViewController {
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var baclButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +38,14 @@ class OtherDetailViewController: UIViewController {
         
         goodButton.layer.cornerRadius = 10.0
         commentButton.layer.cornerRadius = 10.0
+        baclButton.layer.cornerRadius = 10.0
         userImageView.layer.cornerRadius  = 30.0
         
         commentTableView.dataSource = self
         
         getChallengeInfo(challengeId: challengeId)
         getCommentsInfo()
+        getGoodInfo()
         
     }
     
@@ -75,6 +81,7 @@ class OtherDetailViewController: UIViewController {
             case .failure(let err):
                 print("### ERROR ###")
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }
@@ -106,6 +113,7 @@ class OtherDetailViewController: UIViewController {
                 // fail
             case .failure(let err):
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }
@@ -128,11 +136,62 @@ class OtherDetailViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func tapGoodButton(_ sender: Any) {
-        good()
+    func getGoodInfo() {
+        let keychain = Keychain(service: consts.service)
+        guard let accessToken = keychain["access_token"] else { return }
+        guard let user_id = keychain["user_id"] else { return }
+        let url = URL(string: consts.baseUrl + "/challenges/" + challengeId + "/goods?user_id" + user_id)!
+        let headers: HTTPHeaders = [
+            .authorization(bearerToken: accessToken)
+        ]
+        AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            switch response.result {
+                // success
+            case .success(let value):
+                self.goods = []
+                let json = JSON(value).arrayValue
+                print(json)
+                for goods in json {
+                    let good = Good(
+                        id: goods["id"].int!,
+                        user_id: goods["user_id"].int!,
+                        challenge_id: goods["challenge_id"].int!
+                    )
+                    self.goods.append(good)
+                }
+                self.setGoodInfo(goods: self.goods)
+                if self.goods.count != 0 {
+                    self.good = self.goods[0]
+                }
+                // fail
+            case .failure(let err):
+                print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
+            }
+        }
     }
     
-    func good() {
+    func setGoodInfo(goods: [Good]) {
+        if goods.count == 0 {
+            goodFlg = 0
+            goodButton.titleLabel?.text = "Like"
+            goodButton.backgroundColor = UIColor.blue
+        } else {
+            goodFlg = 1
+            goodButton.titleLabel?.text = "Unlike"
+            goodButton.backgroundColor = UIColor.red
+        }
+    }
+    
+    @IBAction func tapGoodButton(_ sender: Any) {
+        if self.goodFlg == 0 {
+            postGood()
+        } else {
+            postNoGood()
+        }
+    }
+    
+    func postGood() {
         let keychain = Keychain(service: consts.service)
         guard let accessToken = keychain["access_token"] else { return print("no token")}
         guard let user_id = keychain["user_id"] else { return print("no user_id")}
@@ -150,9 +209,43 @@ class OtherDetailViewController: UIViewController {
                 let json = JSON(value)
                 print("JSON: \n\(json)")
                 self.alert.showAlert(title: "Good", messaage: "you did good this challenge", viewController: self)
+                self.goodFlg = 1
+                self.goodButton.titleLabel?.text = "Unlike"
+                self.goodButton.backgroundColor = UIColor.red
             case .failure(let err):
                 print("### ERROR ###")
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
+            }
+        }
+    }
+
+    func postNoGood() {
+        let keychain = Keychain(service: consts.service)
+        guard let accessToken = keychain["access_token"] else { return print("no token")}
+        guard let user_id = keychain["user_id"] else { return print("no user_id")}
+        let url = URL(string: consts.baseUrl + "/challenges/" + challengeId + "/goods/" + String(self.good.id))!
+        print(url)
+        let headers: HTTPHeaders = [
+            .authorization(bearerToken: accessToken)
+        ]
+        let parameters: Parameters = [
+            "user_id": user_id,
+            "challenge_id": challengeId
+        ]
+        AF.request(url, method: .delete, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \n\(json)")
+                self.alert.showAlert(title: "No Good", messaage: "you did no good this challenge", viewController: self)
+                self.goodFlg = 0
+                self.goodButton.titleLabel?.text = "Like"
+                self.goodButton.backgroundColor = UIColor.blue
+            case .failure(let err):
+                print("### ERROR ###")
+                print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }
@@ -185,6 +278,7 @@ class OtherDetailViewController: UIViewController {
             case .failure(let err):
                 print("### ERROR ###")
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }

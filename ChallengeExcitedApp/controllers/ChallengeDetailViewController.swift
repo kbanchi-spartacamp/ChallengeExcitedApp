@@ -15,6 +15,7 @@ class ChallengeDetailViewController: UIViewController {
 
     let consts = Constants.shared
     var challengeId = ""
+    var challenge: Challenge!
     var comments: [Comment] = []
     var alert = Alert()
     
@@ -66,10 +67,14 @@ class ChallengeDetailViewController: UIViewController {
                     updated_at: json["updated_at"].string ?? "",
                     user: user
                 )
+                print("#####")
+                print(challenge)
                 self.setChallenge(challenge: challenge)
+                self.challenge = challenge
             case .failure(let err):
                 print("### ERROR ###")
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }
@@ -101,6 +106,7 @@ class ChallengeDetailViewController: UIViewController {
                 // fail
             case .failure(let err):
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }
@@ -110,6 +116,7 @@ class ChallengeDetailViewController: UIViewController {
         descriptionLabel.text = challenge.description
         if (challenge.close_flg == 1) {
             commentButton.isHidden = true
+            commentTextField.isHidden = true
         }
     }
     
@@ -145,10 +152,11 @@ class ChallengeDetailViewController: UIViewController {
             case .failure(let err):
                 print("### ERROR ###")
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }
-    
+        
     /*
     // MARK: - Navigation
 

@@ -18,6 +18,7 @@ class SettingTableViewController: UITableViewController {
     var user: User!
     var user_avator: UserAvator!
     var avator_category: AvatorCategory!
+    let alert = Alert()
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -66,6 +67,7 @@ class SettingTableViewController: UITableViewController {
             case .failure(let err):
                 print("### ERROR ###")
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }
@@ -102,6 +104,7 @@ class SettingTableViewController: UITableViewController {
             case .failure(let err):
                 print("### ERROR ###")
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }

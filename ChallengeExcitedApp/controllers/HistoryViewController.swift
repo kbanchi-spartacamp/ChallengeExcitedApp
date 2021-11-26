@@ -15,6 +15,7 @@ class HistoryViewController: UIViewController {
 
     let consts = Constants.shared
     var challenges: [Challenge] = []
+    let alert = Alert()
     
     @IBOutlet weak var historyTableView: UITableView!
     
@@ -68,6 +69,7 @@ class HistoryViewController: UIViewController {
                 // fail
             case .failure(let err):
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }

@@ -62,6 +62,7 @@ class RegisterViewController: UIViewController {
             case .failure(let err):
                 print("### ERROR ###")
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }

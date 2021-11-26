@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     let consts = Constants.shared
     var token = ""
     var session: ASWebAuthenticationSession?
+    let alert = Alert()
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -84,8 +85,10 @@ class LoginViewController: UIViewController {
                 self.getUserInfo(accessToken: accessToken)
                 HUD.hide()
             case .failure(let err):
+                HUD.hide()
                 print("### ERROR ###")
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }
@@ -112,6 +115,7 @@ class LoginViewController: UIViewController {
             case .failure(let err):
                 print("### ERROR ###")
                 print(err.localizedDescription)
+                self.alert.showAlert(title: "ERROR", messaage: "an error occured", viewController: self)
             }
         }
     }
