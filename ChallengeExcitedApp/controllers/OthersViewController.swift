@@ -103,6 +103,16 @@ extension OthersViewController: UITableViewDataSource {
         nameLabel.text = challenges[indexPath.row].user.name + " さん"
         let titleLabel = cell.viewWithTag(2) as! UILabel
         titleLabel.text = challenges[indexPath.row].title
+        let userImage = cell.viewWithTag(3) as! UIImageView
+        userImage.layer.cornerRadius = 30.0
+        let imageUrl = URL(string: challenges[indexPath.row].user.profile_photo_url)
+        do {
+            let data = try Data(contentsOf: imageUrl!)
+            let image = UIImage(data: data)
+            userImage.image = image
+        } catch let err {
+            print("Error: \(err.localizedDescription)")
+        }
         return cell
     }
     

@@ -657,9 +657,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypj-T8-JAb">
-                                                    <rect key="frame" x="20" y="0.0" width="300" height="30"/>
+                                                    <rect key="frame" x="125" y="5" width="200" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="300" id="UPh-hv-gBr"/>
+                                                        <constraint firstAttribute="width" constant="200" id="UPh-hv-gBr"/>
                                                         <constraint firstAttribute="height" constant="30" id="ad5-dN-pMQ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -667,23 +667,31 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8p-yS-hI2">
-                                                    <rect key="frame" x="20" y="45" width="150" height="30"/>
+                                                    <rect key="frame" x="125" y="50" width="200" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="2jX-UH-kTm"/>
-                                                        <constraint firstAttribute="width" constant="150" id="XdB-B9-vS5"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="dMw-lU-0iV"/>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="udJ-Ay-ZJg"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="udJ-Ay-ZJg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4BU-SG-wCo">
+                                                    <rect key="frame" x="5" y="1.5" width="100" height="97"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="4GP-Jj-7bP"/>
+                                                        <constraint firstAttribute="width" secondItem="4BU-SG-wCo" secondAttribute="height" multiplier="1:1" id="Vca-JZ-Eml"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ypj-T8-JAb" firstAttribute="leading" secondItem="sSl-PM-pXi" secondAttribute="leading" constant="20" id="GS9-4B-Hw3"/>
-                                                <constraint firstItem="ypj-T8-JAb" firstAttribute="top" secondItem="sSl-PM-pXi" secondAttribute="top" id="VY2-Yq-MXh"/>
+                                                <constraint firstItem="ypj-T8-JAb" firstAttribute="leading" secondItem="4BU-SG-wCo" secondAttribute="trailing" constant="20" id="0hn-wh-pXl"/>
+                                                <constraint firstItem="4BU-SG-wCo" firstAttribute="top" secondItem="sSl-PM-pXi" secondAttribute="top" id="1rH-Lb-y4v"/>
+                                                <constraint firstItem="n8p-yS-hI2" firstAttribute="leading" secondItem="4BU-SG-wCo" secondAttribute="trailing" constant="20" id="Mav-Fh-im9"/>
+                                                <constraint firstItem="ypj-T8-JAb" firstAttribute="top" secondItem="sSl-PM-pXi" secondAttribute="top" constant="5" id="VY2-Yq-MXh"/>
+                                                <constraint firstItem="4BU-SG-wCo" firstAttribute="leading" secondItem="sSl-PM-pXi" secondAttribute="leading" constant="5" id="h1g-Dv-DhW"/>
                                                 <constraint firstItem="n8p-yS-hI2" firstAttribute="top" secondItem="ypj-T8-JAb" secondAttribute="bottom" constant="15" id="sFm-1F-BL1"/>
-                                                <constraint firstItem="n8p-yS-hI2" firstAttribute="leading" secondItem="sSl-PM-pXi" secondAttribute="leading" constant="20" id="uGu-eX-ZSZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
